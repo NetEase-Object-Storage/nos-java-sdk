@@ -1,0 +1,16 @@
+com.netease.cloud
+com.netease.cloud.util
+com.netease.cloud.util.json
+com.netease.cloud.auth
+com.netease.cloud.internal
+com.netease.cloud.http
+com.netease.cloud.transform
+com.netease.cloud.handlers
+com.netease.cloud.services.nos
+com.netease.cloud.services.nos.tools
+com.netease.cloud.services.nos.internal
+com.netease.cloud.services.nos.transfer
+com.netease.cloud.services.nos.transfer.internal
+com.netease.cloud.services.nos.transfer.model
+com.netease.cloud.services.nos.model
+com.netease.cloud.services.nos.model.transform

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+ 
+<suite name="bucketTest" verbose="1" >
+	<test name="bucketTest">
+	
+	 	<classes>
+			<class name="com.netease.nos.test.bucket.BucketAclTest" />
+			<class name="com.netease.nos.test.bucket.BucketBasicTest" />
+			<class name="com.netease.nos.test.bucket.BucketDedupTest" />
+			<class name="com.netease.nos.test.bucket.BucketPutTest" />
+			<class name="com.netease.nos.test.bucket.BucketVersionTest" />
+		</classes>
+	</test>
+</suite>

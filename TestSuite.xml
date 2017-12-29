@@ -1,0 +1,157 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="sdk test suite">
+	<test name="sdkTest">
+		<classes>
+			<class name="com.netease.nos.test.bucket.BucketAclTest">
+				<methods>
+					<exclude name="testPutBucketAllAndNormal" />
+					<exclude name="testGetBucketAcl" />
+					<exclude name="testGetNotExistedBucketAcl" />
+					<exclude name="testSetBucketAcl" />
+					<exclude name="testSetNotExistedBucketAcl" />
+				</methods>
+			</class>
+			<class name="com.netease.nos.test.bucket.BucketBasicTest">
+				<methods>
+					<exclude name="testPutBucketAllAndNormal" />
+					<exclude name="testDeleteNotExistedBucket" />
+					<exclude name="testPutObject" />
+					<exclude name="testDeleteNotEmptyBucket" />
+					<exclude name="testDeleteObject" />
+					<exclude name="testDeleteBucket" />
+					<exclude name="testListBucket" />
+				</methods>
+			</class>
+			<class name="com.netease.nos.test.bucket.BucketPutTest">
+			    <methods>
+					<exclude name="testPutBucketAllAndNormal" />
+					<exclude name="testPutBucketWithoutRegion" />
+					<exclude name="testPutBucketWithoutAcl" />
+					<exclude name="testPutBucketIllegalRegion" />
+					<exclude name="testPutBucketButBucketOwnedByYou" />
+					<exclude name="testPutBucketButBucketOwnedByOthers" />
+					<exclude name="testPutBucketwithIllegalName" />
+					<exclude name="testPutBucketBeyondItsUpperLimit" />
+				</methods>
+			</class>			
+			<class name="com.netease.nos.test.mulitpart.MulitPartInitiateTest">
+				<methods>
+                    <exclude name="testInitiateNotExistedBucket" />
+                    <exclude name="testInitiateNormal" />
+                    <exclude name="testInitiateObjectHasExisted" />
+                    <exclude name="testInitiateWithObjNameToLong" />
+				</methods>	
+			</class>			
+			<class name="com.netease.nos.test.mulitpart.MulitPartUploadTest">
+				<methods>
+                    <exclude name="testIllegalUpload" />
+                    <exclude name="testPartSizeTooSmall" />
+                    <exclude name="testPartSizeTooLarge" />
+                    <exclude name="testNormalUpload" />
+                    <exclude name="testPartNumDisorder" />
+                    <exclude name="testPartNumReduplicate" />
+				</methods>	
+			</class>			
+			<class name="com.netease.nos.test.mulitpart.MulitPartListTest">
+				<methods>
+                    <exclude name="testIlleageList" />
+                    <exclude name="testNormalListPart" />
+				</methods>
+			</class>
+			<class name="com.netease.nos.test.mulitpart.MulitPartCompleteTest">
+				<methods>
+                    <exclude name="testIlleageComplete" />
+                    <exclude name="testNormalUpload" />
+				</methods>
+			</class>
+			<class name="com.netease.nos.test.mulitpart.MulitPartAbortTest">
+				<methods>
+                    <exclude name="testIlleageAbort" />
+                    <exclude name="testNormalAbort" />
+				</methods>	
+			</class>
+	
+			<class name="com.netease.nos.test.object.ObjectPutTest">
+				<methods>
+                    <exclude name="testPutObjectNormalMD5" />
+                    <exclude name="testPutObjectRightStorageClass" />
+                    <exclude name="testPutObjectWrongStorageClass" />
+                    <exclude name="testPutObjectExistedObjectName" />
+                    <exclude name="testPutObjectBucketNotExist" />
+                    <exclude name="testPutObjectInputStream" />
+                    <exclude name="testPutObjectIntoBucketOwnedByOthers" />
+				</methods>				
+			</class>
+			<class name="com.netease.nos.test.object.ObjectListTest">
+				<methods>
+                    <exclude name="testListObjectDefault" />
+                    <exclude name="testlistObjectSpecifiedPrefixNoResult" />
+                    <exclude name="testListObjectSpecifiedPrefixSmallerThanMaxkey" />
+                    <exclude name="testListObjectSpecifiedPrefixLargerThanMaxkey" />
+                    <exclude name="testListObjectWrongMaxkey" />
+                    <exclude name="testListObjectSpecifiedMarkerNoResult" />
+                    <exclude name="testListObjectSpecifiedMarkersmallerThanMaxkey" />
+                    <exclude name="testListObjectSpecifiedMarkerLargerThanMaxkey" />
+                    <exclude name="TestListObjectSpecifiedDelimiter" />
+                    <exclude name="testListObjectSpecifiedDelimiterAndWrongPrefix" />
+                    <exclude name="testListObjectSpecifiedDelimiterAndRightPrefix" />
+                    <exclude name="TestListObjectSpecifiedWrongDelimiter" />
+				</methods>	
+			</class>
+			<class name="com.netease.nos.test.object.ObjectDeleteMulitTest">
+				<methods>
+                    <exclude name="testDeleteMulitObject" />
+                    <exclude name="testPutObjectVersionEnabled" />
+				</methods>	
+			</class>
+			<class name="com.netease.nos.test.object.ObjectCopyAndMoveTest">
+				<methods>
+                    <exclude name="testCopyObjectNormal" />
+                    <exclude name="testCopyObjectSourceBucketNotExisted" />
+                    <exclude name="testCopyObjectSourceObjectNotExisted" />
+                    <exclude name="testCopyObjectDescBucketNotExisted" />
+                    <exclude name="testCopyObjectDescObjectHaveExisted" />
+                    <exclude name="testCopyObjectFromOthersPrivateBucket" />
+                    <exclude name="testCopyObjectFromOthersPublicBucket" />
+                    <exclude name="testCopyObjectToOthersBucket" />
+				</methods>
+			</class>
+			<class name="com.netease.nos.test.object.ObejctGetAndDeleteTest">
+				<methods>
+                    <exclude name="testGetObjectButBucketNotExisted" />
+                    <exclude name="testGetObjectButObjectNotExisted" />
+                    <exclude name="testDeleteObjectButBucketNotExisted" />
+                    <exclude name="testDeleteObjectButObjectNotExisted" />
+                    <exclude name="testDeleteObjectButFromOthersBucket" />
+				</methods>
+			</class>
+			
+			<class name="com.netease.nos.test.object.ObjectGetRanageTest">
+				<methods>
+                    <exclude name="testGetObjectRange" />
+                    <exclude name="testGetObjectWithInvaildRange" />
+                    <exclude name="testGetObjectWithLargerRange" />
+				</methods>			
+			</class>
+			<class name="com.netease.nos.test.object.UrlDownloadTest">
+				<methods>
+                    <exclude name="testUrlDownload" />
+                    <exclude name="testUrlDownloadWithInvaildExpiration" />
+				</methods>
+			</class>
+			<class name="com.netease.nos.test.permission.TestBucketPermission">
+				<methods>
+                    <exclude name="testPermission" />
+				</methods>			
+			</class>
+			<class name="com.netease.nos.test.manager.TestManager">
+				<methods>
+                    <exclude name="testUploadAndDownloadFile" />
+                    <exclude name="testUploadDirectory" />
+                    <exclude name="testUploadStream" />
+                    <exclude name="testAbort" /> 
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>
