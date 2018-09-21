@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+ 
+<suite name="mulitobjectTest" verbose="1" >
+	<test name="mulitobjectTest">
+	
+	 	<classes>
+			<class name="com.netease.nos.test.object.ObjectVersionsTest" />
+			<class name="com.netease.nos.test.object.ObjectPutTest" />
+			<class name="com.netease.nos.test.object.ObjectListTest" />
+			<class name="com.netease.nos.test.object.ObjectDeleteMulitTest" />
+			<class name="com.netease.nos.test.object.ObjectCopyAndMoveTest" />
+			<class name="com.netease.nos.test.object.DeduplicateTest" />
+			<class name="com.netease.nos.test.object.ObjectGetRanageTest" />
+			<class name="com.netease.nos.test.object.ObjectDeleteMulitTest" />
+			<class name="com.netease.nos.test.object.UrlDownloadTest" />
+		</classes>
+	</test>
+</suite>

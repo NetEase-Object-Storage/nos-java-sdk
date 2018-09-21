@@ -1,0 +1,33 @@
+<!--<br/> <br/> Code highlighting produced by Actipro CodeHighlighter (freeware)<br/> 
+	http://www.CodeHighlighter.com/<br/> <br/> -->
+<assembly xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+http://maven.apache.org/xsd/assembly-1.0.0.xsd">
+	<id>sdk</id>
+	<formats>
+		<format>tar.gz</format>
+	</formats>
+	<includeBaseDirectory>false</includeBaseDirectory>
+	<fileSets>
+		<fileSet>
+			<directory>${project.build.directory}</directory>
+			<outputDirectory>${project.artifactId}-${project.version}/lib</outputDirectory>
+			<includes>
+				<include>*.jar</include>
+			</includes>
+		</fileSet>
+		<fileSet>
+			<directory>Samples</directory>
+			<outputDirectory>${project.artifactId}-${project.version}/samples</outputDirectory>
+		</fileSet>
+	</fileSets>
+	<dependencySets>
+		<dependencySet>
+			<outputDirectory>${project.artifactId}-${project.version}/third-party</outputDirectory>
+			<scope> runtime </scope>
+			<excludes>
+				<exclude>nos*.jar</exclude>
+			</excludes>
+		</dependencySet>
+	</dependencySets>
+</assembly>

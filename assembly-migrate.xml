@@ -1,0 +1,37 @@
+<!--<br/> <br/> Code highlighting produced by Actipro CodeHighlighter (freeware)<br/> 
+	http://www.CodeHighlighter.com/<br/> <br/> -->
+<assembly xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+http://maven.apache.org/xsd/assembly-1.0.0.xsd">
+	<id>migrate</id>
+	<formats>
+		<format>tar.gz</format>
+	</formats>
+	<includeBaseDirectory>false</includeBaseDirectory>
+	<fileSets>
+		<fileSet>
+			<directory>${project.basedir}</directory>
+			<outputDirectory>/</outputDirectory>
+			<includes>
+				<include>runSync.sh</include>
+			</includes>
+		</fileSet>
+		<fileSet>
+			<directory>${project.build.directory}</directory>
+			<outputDirectory>lib/</outputDirectory>
+			<includes>
+				<include>*.jar</include>
+			</includes>
+		</fileSet>
+		<fileSet>
+			<directory>migrationConf</directory>
+			<outputDirectory>conf</outputDirectory>
+		</fileSet>
+	</fileSets>
+	<dependencySets>
+		<dependencySet>
+			<outputDirectory>lib</outputDirectory>
+			<scope> runtime </scope>
+		</dependencySet>
+	</dependencySets>
+</assembly>
